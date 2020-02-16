@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" contert="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+
+<body>
+    <form id="registration" method="post" action="http://httpbin.org/post ">
+        <fieldset>
+            <legend>Форма регистрации</legend>
+            <div>
+                <lable for="fullName">ФИО:</label>
+                    <input id="fullName" name="fullName" type="text" placeholder="Ф И О" required/></div>
+            <div>
+                <lable for id="email">Email:</lable> <input name="emailAddress" type="email" placeholder="Email" required/>
+            </div>
+            <div>
+                <lable for id="phone">Номер телефона:</lable> <input name="phone" type="tel" placeholder="Номер телефона" required attern="\(\d{3,4}\) \d{2,3}-\d{2}-\d{2}" /> </div>
+            <div>
+                <lable for="dateofbirth">Дата рождения</lable>
+                <input id="dateofbirth" name="dateofbirth" type="date" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Параметры доставки</legend>
+            <div>
+                <lable for="address">Адрес:</label>
+                    <textarea id="address" name="address" type="text" rows="5"></textarea></div>
+            <div>
+                <lable for="postcode">Почтовый индекс:</lable>
+                <input id="postcode" name="postcode" type="text" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Предпочтительный способ получения уведомлений</legend>
+            <div><input id="emailmessage" type="radio" name="message" />
+                <lable>По Email</lable>
+            </div>
+            <div> <input id="phonemessage" type="radio" name="message" />
+                <lable>По телефону</lable>
+            </div>
+            <div> <input id="nomessage" type="radio" name="message" />
+                <lable>Не уведомлять меня</lable>
+            </div>
+        </fieldset>
+        <button type="submit">Отправить данные</button>
+    </form>
+</body>
+
+</html>
