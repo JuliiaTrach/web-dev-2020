@@ -17,7 +17,8 @@
 </header>
 
 <body>
-    <form>
+    <form method="POST">
+        <progress id="progress" value="0" max="100"></progress>
         <p>Для регистрации на конференции и выставления счета-фактуры, просим заполнить и отправить нам регистрационную форму</p>
         <p> Поля, отмеченные символом *, являются обязательными для заполнения.</p>
         <fieldset>
@@ -34,31 +35,32 @@
             <div>Телефон:*<input name="phone" type="tel" required/></div>
             <div>Мобильный телефон:*<input name="mob-phone" type="tel" required/></div>
             <div>Факс:*<input name="fax" type="" required/></div>
-            <div>Промо-код:<input name="mob-phone" type="" required/></div>
+            <div>Промо-код:<input name="promocode" type="text" required/></div>
         </fieldset>
         <fieldset>
             <legend>Сведения об организации:</legend>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>Полное название организации:*<input name="organizationName" type="text" required/></div>
+            <div>Страна регистрации:*<input name="countryOfRegistration" type="text" required/></div>
+            <div>Город:*<input name="city" type="text" required /></div>
+            <div>ИНН (VAT-номер для организаций из стран ЕС):<input name="vat" type="number" required /></div>
         </fieldset>
         <fieldset>
             <legend>Контактное лицо по оформлению документов:</legend>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
-            <div></div>
+            <div>Фамилия:*<input name="lastName" type="text" required autocomplete/></div>
+            <div>Имя:*<input name="firstName" type="text" required autocomplete/></div>
+            <div>Отчество:*<input name="father'sName" type="text" required autocomplete/></div>
+            <div>Почтовый адрес (с индексом):*<input name="address" type="text" required/></div>
+            <div>Телефон:*<input name="phone" type="tel" required autocomplete/></div>
+            <div>Факс:*<input name="fax" type="" required autocomplete/></div>
+            <div>E-mail:*<input name="E-mailAddress" type="email" required autocomplete/></div>
         </fieldset>
         <fieldset>
             <legend>Дополнительно:</legend>
-            <div>Примечание: <textarea type="text" row="5"></textarea></div>
-            <div></div>
-
+            <div>Примечание: <textarea type="text" row="10"></textarea></div>
+            <div><button type="submit">Зарегистрироваться</button></div>
         </fieldset>
+
+    </form>
 </body>
 
 </html>
