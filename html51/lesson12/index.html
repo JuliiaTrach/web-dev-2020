@@ -8,7 +8,7 @@
     <title>Canvas</title>
 </head>
 
-<body onload="createImage();">
+<body onload="createImage();createImage2();createImage3();createImage4();">
     <canvas id="my_canvas" width="150" height="150"></canvas>
     <script type="text/javascript">
         function createImage() {
@@ -20,7 +20,7 @@
     </script>
     <div><canvas id="threct" width="150" height="150"></canvas>
         <script type="text/javascript">
-            function createImage() {
+            function createImage2() {
                 let canvas = document.getElementById("threct");
                 let ctx = canvas.getContext("2d");
                 ctx.fillStyle = "rgb(0,0,0)";
@@ -31,7 +31,7 @@
     </div>
     <div><canvas id="rgbrect" width="310" height="150"></canvas>
         <script type="text/javascript">
-            function createImage() {
+            function createImage3() {
                 let canvas = document.getElementById("rgbrect");
                 let ctx = canvas.getContext("2d");
                 ctx.fillStyle = "rgb(100,0,0)";
@@ -43,16 +43,29 @@
             }
         </script>
         <div>
-            <canvas id="thimage" width="150" height="150"></canvas>
+            <canvas id="thimage" width="150" height="300"></canvas>
             <script type="text/javascript">
-                function createImage() {
+                function createImage4() {
                     let canvas = document.getElementById("thimage");
                     let ctx = canvas.getContext("2d");
 
+                    ctx.fillStyle = "rgb(0,150,0)";
+                    ctx.fillRect(20, 5, 20, 35);
+                    ctx.fillStyle = "rgb(0,0,100)";
+                    ctx.fillRect(20, 40, 20, 90);
+
+                    ctx.fillStyle = "rgb(0,150,0)";
+                    ctx.fillRect(60, 35, 20, 50);
+                    ctx.fillStyle = "rgb(0,0,100)";
+                    ctx.fillRect(60, 55, 20, 75);
+
+                    ctx.fillStyle = "rgb(0,150,0)";
+                    ctx.fillRect(100, 20, 20, 42);
+                    ctx.fillStyle = "rgb(0,0,100)";
+                    ctx.fillRect(100, 35, 20, 95);
                 }
             </script>
         </div>
-    </div>
 </body>
 
 </html>
