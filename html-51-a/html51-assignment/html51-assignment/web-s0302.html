@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html lang="ru">
+<html lang="ru, en">
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -10,56 +10,75 @@
     </title>
     <meta name="keywords" content="КПНУ, К-ПНУ, Каменец-Подольский национальный университет,
     физико-математический факультет, моделирование, международная конференция" />
-    <link href="Content/Site.css" rel="stylesheet" />
+
 </head>
 <header>
     <h1>Регистрация на конференцию</h1>
 </header>
 
 <body>
-    <form method="POST">
+    <form id="registretionForm" method="POST" action="http://httpbin.org/post">
         <progress id="progress" value="0" max="100"></progress>
         <p>Для регистрации на конференции и выставления счета-фактуры, просим заполнить и отправить нам регистрационную форму</p>
         <p> Поля, отмеченные символом *, являются обязательными для заполнения.</p>
         <fieldset>
             <legend>Конференция:</legend>
-            Название конференции:*<input type="text" required/>
+            <label for="conferensname">Название конференции:*</label><input name="conferensname" type="text" required/>
         </fieldset>
         <fieldset>
             <legend>Сведения об участнике:</legend>
-            <div>Фамилия:*<input name="lastName" type="text" required/></div>
-            <div>Имя:* <input name="firstName" type="text" required/></div>
-            <div>Отчество:*<input name="father'sName" type="text" required/></div>
-            <div>Должность:* <input name="position" type="text" required/></div>
-            <div>E-mail:*<input name="E-mailAddress" type="email" required/></div>
-            <div>Телефон:*<input name="phone" type="tel" required/></div>
-            <div>Мобильный телефон:*<input name="mob-phone" type="tel" required/></div>
-            <div>Факс:*<input name="fax" type="" required/></div>
-            <div>Промо-код:<input name="promocode" type="text" required/></div>
+            <div>
+                <label for="lastName">Фамилия:*</label><input name="lastName" type="text" required/></div>
+            <div>
+                <label for="firstName">Имя:*</label> <input name="firstName" type="text" required/></div>
+            <div>
+                <label for="father'sName">Отчество:*</label><input name="father'sName" type="text" required/></div>
+            <div>
+                <label for="position">Должность:*</label> <input name="position" type="text" required/></div>
+            <div>
+                <label for="E-mailAddress">E-mail:*</label><input name="E-mailAddress" type="email" required/></div>
+            <div>
+                <label for="phone">Телефон:*</label><input name="phone" type="tel" required/></div>
+            <div>
+                <label for="mob-phone">Мобильный телефон:*</label><input name="mob-phone" type="tel" required/></div>
+            <div>
+                <label for="fax">Факс:*</label><input name="fax" type="tel" required/></div>
+            <div>
+                <label for="promocode">Промо-код:</label><input name="promocode" type="text" /></div>
         </fieldset>
         <fieldset>
             <legend>Сведения об организации:</legend>
-            <div>Полное название организации:*<input name="organizationName" type="text" required/></div>
-            <div>Страна регистрации:*<input name="countryOfRegistration" type="text" required/></div>
-            <div>Город:*<input name="city" type="text" required /></div>
-            <div>ИНН (VAT-номер для организаций из стран ЕС):<input name="vat" type="number" required /></div>
+            <div>
+                <label for="organizationName">Полное название организации:*</label><input name="organizationName" type="text" required/></div>
+            <div>
+                <label for="countryOfRegistration">Страна регистрации:*</label><input name="countryOfRegistration" type="text" required/></div>
+            <div>
+                <label for="city">Город:*</label><input name="city" type="text" required /></div>
+            <div>
+                <label for="vat">ИНН(VAT-номер для организаций из стран ЕС):</label><input name="vat" type="number" /></div>
         </fieldset>
         <fieldset>
             <legend>Контактное лицо по оформлению документов:</legend>
-            <div>Фамилия:*<input name="lastName" type="text" required autocomplete/></div>
-            <div>Имя:*<input name="firstName" type="text" required autocomplete/></div>
-            <div>Отчество:*<input name="father'sName" type="text" required autocomplete/></div>
-            <div>Почтовый адрес (с индексом):*<input name="address" type="text" required/></div>
-            <div>Телефон:*<input name="phone" type="tel" required autocomplete/></div>
-            <div>Факс:*<input name="fax" type="" required autocomplete/></div>
-            <div>E-mail:*<input name="E-mailAddress" type="email" required autocomplete/></div>
+            <div>
+                <label for="lastName2">Фамилия:*</label><input name="lastName2" type="text" required autocomplete/></div>
+            <div>
+                <label for="firstName2">Имя:*</label><input name="firstName2" type="text" required autocomplete/></div>
+            <div>
+                <label for="father'sName2">Отчество:*</label><input name="father'sName2" type="text" required autocomplete/></div>
+            <div>
+                <label for="address">Почтовый адрес (с индексом):*</label><input name="address" type="text" required/></div>
+            <div>
+                <label for="phone2">Телефон:*</label><input name="phone2" type="tel" required autocomplete/></div>
+            <div>
+                <label for="fax2">Факс:*</label><input name="fax2" type="tel" required autocomplete/></div>
+            <div>
+                <label for="E-mailAddress2">E-mail:*</label><input name="E-mailAddress2" type="email" required autocomplete/></div>
         </fieldset>
         <fieldset>
             <legend>Дополнительно:</legend>
             <div>Примечание: <textarea type="text" row="10"></textarea></div>
             <div><button type="submit">Зарегистрироваться</button></div>
         </fieldset>
-
     </form>
 </body>
 
