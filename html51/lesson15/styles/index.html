@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Web-15</title>
+    <script src="scripts/main.js"></script>
+    <link rel="stylesheet" href="styles/main.css">
+    <script>
+        var coordsPlaceHolder;
+
+        function init() {
+            coordsPlaceHolder = document.getElementById("coords");
+            demoMap = document.getElementById("demoMap");
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    coordsPlaceHolder.innerHTML = "<br>Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                });
+
+            } else {
+                coordsPlaceHolder.innerHTML = "Geolocation is not supported by this browser.";
+            }
+        }
+
+        function showPosition(position) {
+            coordsPlaceHolder.innerHTML = "<br>Latitude: " + position.coords.latitude + "<br>Longitude: " + position.coords.longitude;
+        }
+
+        function showError(error) {
+            switch (error.code) {
+                case error.PERMISSION_DENIED:
+                    coordsPlaceHolder.innerHTML = "User denied the request for Geolocation."
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    coordsPlaceHolder.innerHTML = "Location information is unavailable."
+                    break;
+                case error.TIMEOUT:
+                    coordsPlaceHolder.innerHTML = "The request to get user location timed out."
+                    break;
+                case error.UNKNOWN_ERROR:
+                    coordsPlaceHolder.innerHTML = "An unknown error occurred."
+                    break;
+            }
+        }
+    </script>
+</head>
+
+<body onload="init()">
+    <p>Current location is:<span id="coords"></span> </p>
+    <button onclick="getLocation()">Try it</button>
+    <img src="" alt="Image for geoposition" id="demoMap">
+</body>
+
+</html>
